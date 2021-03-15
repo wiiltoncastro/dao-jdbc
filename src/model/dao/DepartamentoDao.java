@@ -6,7 +6,6 @@ import model.entidades.Departamento;
 
 public interface DepartamentoDao {
 
-	
 	void inserir(Departamento departamento);
 	void atualizar(Departamento departamento);
 	void deletePorId(Integer id);
