@@ -1,6 +1,6 @@
 package aplicacao;
 
-import java.util.Date;
+import java.util.List;
 
 import model.dao.DaoFabrica;
 import model.dao.VendedorDao;
@@ -10,15 +10,18 @@ import model.entidades.Vendedor;
 public class programa {
 
 	public static void main(String[] args) {
-
-		Departamento d = new Departamento(1, "Livros");
-		System.out.println(d.toString());
-		
-		Vendedor v = new Vendedor(21, "Bob", "bob@gmail.com", new Date(), 3000.00, d);
-		
-		System.out.println(v.toString());
 	
 		VendedorDao vD = DaoFabrica.criarVendedorDao();
+		
+		System.out.println("=== Teste 1: Vendedor acharPorId ===");
+		Vendedor vendedor = vD.acharPorId(3);
+		System.out.println(vendedor);
+		
+		System.out.println("\n=== Teste 2: Vendedor acharPorDepartamento ===");
+		Departamento departamento = new Departamento(2, null);
+		List<Vendedor> lista = vD.acharPorDepartamento(departamento);
+		lista.forEach(System.out::println);
+		
 		
 	}
 
