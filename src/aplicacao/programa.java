@@ -22,6 +22,9 @@ public class programa {
 		List<Vendedor> lista = vD.acharPorDepartamento(departamento);
 		lista.forEach(System.out::println);
 		
+		System.out.println("\n=== Teste 3: Vendedor acharTodos ===");
+		lista = vD.acharTodos();
+		lista.forEach(System.out::println);
 		
 	}
 
