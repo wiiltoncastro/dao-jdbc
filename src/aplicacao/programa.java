@@ -1,5 +1,6 @@
 package aplicacao;
 
+import java.util.Date;
 import java.util.List;
 
 import model.dao.DaoFabrica;
@@ -25,6 +26,17 @@ public class programa {
 		System.out.println("\n=== Teste 3: Vendedor acharTodos ===");
 		lista = vD.acharTodos();
 		lista.forEach(System.out::println);
+		
+		System.out.println("\n=== Teste 4: Vendedor inserir ===");
+		Vendedor v2 = new Vendedor(null, "Greg", "greg@gmail.com", new Date(), 4000.0, departamento);
+		vD.inserir(v2);
+		System.out.println("Iserido! Novo Id: " + v2.getId());
+		
+		System.out.println("\n=== Teste 5: Vendedor atualizar ===");
+		vendedor = vD.acharPorId(1);
+		vendedor.setNome("Marta Waine");
+		vD.atualizar(vendedor);
+		System.out.println("Atualização completada!");
 		
 	}
 
