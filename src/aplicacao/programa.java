@@ -40,9 +40,9 @@ public class programa {
 		*/
 		
 		/*System.out.println("\n=== Teste 5: Vendedor atualizar ===");
-		vendedor = vD.acharPorId(1);
-		vendedor.setNome("Marta Waine");
-		vD.atualizar(vendedor);
+		Vendedor v1 = vD.acharPorId(1);
+		v1.setNome("Bob Waine");
+		vD.atualizar(v1);
 		System.out.println("Atualização completada!");
 		*/
 		
@@ -52,6 +52,8 @@ public class programa {
 		vD.deletePorId(id);
 		System.out.println("Excluido com sucesso!");
 		*/
+		
+		
 		
 		sc.close();
 	}
